@@ -1,0 +1,171 @@
+<html>
+<head>
+      <link href="mytempp.css"
+       rel="stylesheet"
+       type="text/css"/>
+      <script>
+		function A()
+		{
+			//clear messages if present
+			document.getElementById("etxt1").innerHTML="";
+			document.getElementById("etxt2").innerHTML="";
+							
+			//check values
+			var s=document.getElementById("ITEM1").value;
+			var t=document.getElementById("ITEM2").value;
+		
+			if(s==null || s=="")
+			{	
+				alert("enter the value of item 1 please");
+			
+			}
+			else if(t==null || t=="")
+			{
+				alert("enter the value of item 2 please");
+	
+			}
+			else
+			{  
+				document.getElementById("s1").innerHTML=s;
+				document.getElementById("s2").innerHTML=t;
+				var a=parseInt(s);
+				var b=parseInt(t);
+				var BILL=a+b;
+				document.getElementById("s3").innerHTML=BILL;
+			}
+		}
+</script>
+
+<script src="jquery.js">
+</script>
+<script>
+$(document).ready(function(e) {
+			 $("#menu").hide();
+			 $("#button").hide();
+			 $("#content").hide();
+			 $("#ad").hide();
+			 $("#jadoo").hide();
+			 $("#bottom").hide();
+	 
+	 		$("#banner").click(function(){
+				$("#menu").slideDown(2000);
+				$("#button").slideDown(2000);
+				});
+			
+			$("#menu").click(function(){
+				$("#content").slideDown(200);
+				$("#jadoo").hide();
+				});
+		
+				
+				$("#button").click(function(){
+					$("#jadoo").show();
+					$("#bottom").show();
+					$("#content").hide();
+					$("#ad").hide();
+				});
+				$("#button").dblclick(function(){
+					$("#content").show();
+					$("#bottom").show();
+					$("#jadoo").hide();
+					$("#ad").hide();
+				});
+				
+				
+			$("#content").click(function(){
+				$("#ad").slideDown(200);
+				$("#bottom").slideDown(200);
+	
+			});
+		
+			
+});
+			
+</script>
+</head>
+<body>
+       <div id="main">
+
+       <div id="wrapper">
+
+       <div id="banner">
+
+            <h2>THELEELA.com</h2></div><!--end of banner-->
+
+       <div id="menu">
+
+               <a href="#"><b>Food Zone</b></a>
+               <a href="#"><b>Spa Area</b></a>
+               <a href="#"><b>Shops</b></a>
+               <a href="#"><b>Gaming Zone</b></a>
+               
+          </div><!--end of menu-->
+          
+             <div id="button">
+               <a href="#"><b>TOTAL PAYMENT/BILL</b></a>               </div>
+      
+      
+       <div id="content">
+       <p><br>
+       FOOD is any substance[1] consumed to provide nutritional support for an organism.<br><br> Food is usually of plant, animal or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.<br><br> The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth.<br> Different species of animals have different feeding behaviours that satisfy the needs of their unique metabolisms, often evolved to fill a specific ecological niche within specific geographical contexts.<br>
+      <br> Omnivorous humans are highly adaptable and have adapted to obtain food in many different ecosystems. Historically, humans secured food through two main methods: hunting and gathering and agriculture.<br><br></p>
+       </div><!--end of content-->
+       
+  <div id="jadoo">
+       <form method="post">
+
+	<p>
+    	<b>Item number 1:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="ITEM1" type="text" name="T1"  />
+        <span id="etxt1" style="color:#F03;"></span>
+	</p>
+    
+	<p>
+    	<b>Item number 2:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="ITEM2" type="text" name="T2"  />
+    <span id="etxt2" style="color:#F03;"></span>
+	</p>
+    
+	<p id="my"> item 1: <span id="s1"></span><br>
+    	item 2: <span id="s2"></span><br>
+    	YOUR TOTAL BILL: <span id="s3"></span><br /></p>
+ 
+ 	<p ><input id="by"onClick="A()" type="button" name="T3" value="CALCULATE"/></p>   
+    <p><input id="PRINT" type="button" value="PRINT" name="T4"/></p>
+    <p><input id="help" type="button" value="SUGGESTIONS" name="T5"/></p>
+</form>
+       </div>
+       <!--end of jadoo-->
+       
+       
+       
+       
+       <div id="ad">
+       <img src="pp.jpg" height="400" width="300">
+       </div><!--end of ad-->
+      
+      <div id="middle">
+      
+      </div><!--end of middle-->
+      
+<div id="bottom">
+  
+  <p>
+            <a href="#">Clients</a>
+            <a href="#">FAQs</a>
+            <a href="#">Services</a>
+            <a href="#">Terms&conditions </a>
+  </p>
+  <p>
+copyright &copy; , all rights are issued in name of our alluring cottages.
+  </p>
+
+            </div><!--end of bottom-->
+            
+            </div><!--end of wrapper-->
+                       
+            </div><!--end of main-->
+            
+            
+</body>
+</html>
